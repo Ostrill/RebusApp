@@ -1,0 +1,157 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@color/colorBackground"
+    tools:context=".ui.settings.SettingsFragment">
+
+    <ImageView
+        android:id="@+id/settings_back_button"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:clickable="true"
+        android:focusable="true"
+        android:background="?android:attr/selectableItemBackgroundBorderless"
+        android:layout_margin="10dp"
+        android:src="@drawable/ic_arrow_back"/>
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_gravity="center">
+
+        <LinearLayout
+            android:id="@+id/settings_how_to_play_layout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:clickable="true"
+            android:focusable="true"
+            android:background="?android:attr/selectableItemBackground"
+            android:padding="10dp"
+            android:orientation="horizontal">
+            <ImageView
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:layout_gravity="center_vertical"
+                android:layout_marginEnd="10dp"
+                android:alpha=".5"
+                android:src="@drawable/ic_settings_how_to_play"/>
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:text="@string/settings_how_to_play"
+                android:layout_weight="1"
+                style="@style/TextAppearance.MaterialComponents.Headline6"
+                android:textColor="@color/colorText"/>
+        </LinearLayout>
+
+        <View
+            android:layout_width="320dp"
+            android:layout_height="1dp"
+            android:background="@color/colorSeparator"/>
+
+        <LinearLayout
+            android:id="@+id/settings_feedback_layout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:clickable="true"
+            android:focusable="true"
+            android:background="?android:attr/selectableItemBackground"
+            android:padding="10dp"
+            android:orientation="horizontal">
+            <ImageView
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:layout_gravity="center_vertical"
+                android:layout_marginEnd="10dp"
+                android:alpha=".5"
+                android:src="@drawable/ic_settings_feedback"/>
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:text="@string/settings_about"
+                android:layout_weight="1"
+                style="@style/TextAppearance.MaterialComponents.Headline6"
+                android:textColor="@color/colorText"/>
+        </LinearLayout>
+
+        <View
+            android:layout_width="320dp"
+            android:layout_height="1dp"
+            android:background="@color/colorSeparator"/>
+
+<!--        <LinearLayout-->
+<!--            android:id="@+id/settings_language_layout"-->
+<!--            android:layout_width="match_parent"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:orientation="horizontal">-->
+<!--            <ImageView-->
+<!--                android:layout_width="20dp"-->
+<!--                android:layout_height="20dp"-->
+<!--                android:layout_gravity="center_vertical"-->
+<!--                android:layout_marginEnd="10dp"-->
+<!--                android:alpha=".5"-->
+<!--                android:src="@drawable/ic_settings_language"/>-->
+<!--            <TextView-->
+<!--                android:layout_width="0dp"-->
+<!--                android:layout_height="wrap_content"-->
+<!--                android:layout_weight="1"-->
+<!--                android:text="@string/settings_language"-->
+<!--                style="@style/TextAppearance.MaterialComponents.Headline6"-->
+<!--                android:textColor="@color/colorText"/>-->
+<!--            <Spinner-->
+<!--                android:id="@+id/settings_language_spinner"-->
+<!--                android:background="@null"-->
+<!--                android:textAlignment="textEnd"-->
+<!--                android:layout_width="100dp"-->
+<!--                android:layout_height="wrap_content"-->
+<!--                android:entries="@array/languages"/>-->
+
+<!--        </LinearLayout>-->
+
+<!--        <View-->
+<!--            android:layout_width="300dp"-->
+<!--            android:layout_height="1dp"-->
+<!--            android:layout_marginTop="10dp"-->
+<!--            android:layout_marginBottom="10dp"-->
+<!--            android:background="@color/colorSeparator"/>-->
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="10dp"
+            android:orientation="horizontal">
+            <ImageView
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:layout_gravity="center_vertical"
+                android:layout_marginEnd="10dp"
+                android:alpha=".5"
+                android:src="@drawable/ic_settings_progress"/>
+            <TextView
+                android:id="@+id/settings_statistics_label"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                style="@style/TextAppearance.MaterialComponents.Headline6"
+                android:textColor="@color/colorText"
+                tools:text="4/48 solved"/>
+            <TextView
+                android:id="@+id/settings_reset_button"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:clickable="true"
+                android:focusable="true"
+                android:background="?android:attr/selectableItemBackground"
+                android:textAlignment="textEnd"
+                android:text="@string/settings_reset"
+                style="@style/TextAppearance.MaterialComponents.Headline6"
+                android:textColor="@color/colorTextWarning"/>
+        </LinearLayout>
+
+    </LinearLayout>
+
+</FrameLayout>

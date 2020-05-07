@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name"               >Rebus game</string>
+    <string name="level"                  >Level</string>
+    <string name="rebuses_for_unlock"     >rebuses\nfor unlock</string>
+    <string name="help_text"              >Show answer for</string>
+    <string name="help_secondary_text"    >\?</string>
+    <string name="help_yes"               >Yes</string>
+    <string name="help_no"                >No</string>
+    <string name="long_loading_text"      >Please, wait</string>
+    <string name="empty_placeholder_text" >It\'s strange, but\nthere aren\'t rebuses</string>
+    <string name="settings_language"      >Language</string>
+    <string name="settings_how_to_play"   >How to play?</string>
+    <string name="settings_about"         >Feedback</string>
+    <string name="settings_reset"         >Reset</string>
+    <string name="settings_progress"      >solved</string>
+    <string name="reset_text"             >Do you want to reset all progress?</string>
+    <string name="reset_yes"              >Reset</string>
+    <string name="reset_no"               >Cancel</string>
+    <string name="how_to_play_close"      >Close</string>
+    <string name="how_to_play_text_0"     >Welcome to Rebus game! Swipe to start</string>
+    <string name="how_to_play_text_1"     >Connect different images, think by unexpected way</string>
+    <string name="how_to_play_text_2"     >Cube? Block? Corner of the room? Think about all the predicts</string>
+    <string name="how_to_play_text_3"     >Improve your thinking with a huge number of bright rebuses</string>
+    <string name="how_to_play_text_4"     >Collect puzzle pieces by solving rebuses. It can help you to open the hardest ones</string>
+    <string name="how_to_play_start"      >Got it</string>
+    <string name="feedback_text"          >The game created as\ncoursework, MIREA, 2020</string>
+    <string name="feedback_close"         >Close</string>
+</resources>

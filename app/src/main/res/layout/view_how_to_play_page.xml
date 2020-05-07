@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    android:id="@+id/how_to_play_text_layout"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:background="@color/colorHowToPlay3">
+
+    <ImageView
+        android:id="@+id/how_to_play_image"
+        android:layout_gravity="center_horizontal"
+        android:layout_width="300dp"
+        android:layout_height="300dp"
+        tools:src="@drawable/img_how_to_play_3"/>
+
+    <TextView
+        android:id="@+id/how_to_play_text"
+        android:layout_gravity="center_horizontal"
+        android:layout_width="300dp"
+        android:layout_height="130dp"
+        android:paddingStart="20dp"
+        android:paddingEnd="20dp"
+        android:textColor="@color/colorText"
+        android:textAlignment="center"
+        style="@style/TextAppearance.MaterialComponents.Headline6"
+        tools:text="@string/how_to_play_text_3"/>
+
+    <Button
+        android:id="@+id/how_to_play_finish_btn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginBottom="40dp"
+        android:text="@string/how_to_play_start"
+        style="@style/PerfectTextButton"/>
+
+</LinearLayout>

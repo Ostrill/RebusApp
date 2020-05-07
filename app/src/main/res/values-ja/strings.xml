@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name"               >レバス</string>
+    <string name="level"                  >レベルは</string>
+    <string name="rebuses_for_unlock"     >つのレバス\nからアンロック</string>
+    <string name="help_text"/>
+    <string name="help_secondary_text"    >で答えを見せる？</string>
+    <string name="help_yes"               >はい</string>
+    <string name="help_no"                >いいえ</string>
+    <string name="long_loading_text"      >待ってください</string>
+    <string name="empty_placeholder_text" >奇妙ですが、\nレバスはありません</string>
+    <string name="settings_language"      >言語</string>
+    <string name="settings_how_to_play"   >どうやって遊ぶ？</string>
+    <string name="settings_about"         >フィードバック</string>
+    <string name="settings_reset"         >リセット</string>
+    <string name="settings_progress"      >つが解けた</string>
+    <string name="reset_text"             >進捗状況をリセットたい？</string>
+    <string name="reset_yes"              >はい</string>
+    <string name="reset_no"               >いいえ</string>
+    <string name="how_to_play_close"      >閉じる</string>
+    <string name="how_to_play_text_0"     >ゲームへようこそ！\n始めるにはスワイプ。</string>
+    <string name="how_to_play_text_1"     >形をつなぎましょう。型にはまらない考えりましょう。</string>
+    <string name="how_to_play_text_2"     >立方体？ブロック？部屋の角？すべてのオプションを使用します。</string>
+    <string name="how_to_play_text_3"     >明るいレバスをたくさん解いてロジックを発展させましょう。</string>
+    <string name="how_to_play_start"      >晴れ</string>
+    <string name="feedback_text"          >このゲームは第２のコースのコースワーク、ミレア、２０２０年</string>
+    <string name="feedback_close"         >閉じる</string>
+</resources>

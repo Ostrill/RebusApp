@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name"               >Ребусы</string>
+    <string name="level"                  >Уровень</string>
+    <string name="rebuses_for_unlock"     >ребусов\nдо открытия</string>
+    <string name="help_text"              >Показать ответ за</string>
+    <string name="help_secondary_text"    >\?</string>
+    <string name="help_yes"               >Да</string>
+    <string name="help_no"                >Нет</string>
+    <string name="long_loading_text"      >Пожалуйста, подождите</string>
+    <string name="empty_placeholder_text" >Странно,\nно ребусов нет</string>
+    <string name="settings_language"      >Язык</string>
+    <string name="settings_how_to_play"   >Как играть?</string>
+    <string name="settings_about"         >Обратная связь</string>
+    <string name="settings_reset"         >Сброс</string>
+    <string name="settings_progress"      >решено</string>
+    <string name="reset_text"             >Вы хотите сбросить весь прогресс?</string>
+    <string name="reset_yes"              >Да</string>
+    <string name="reset_no"               >Отмена</string>
+    <string name="how_to_play_close"      >Закрыть</string>
+    <string name="how_to_play_text_0"     >Добро пожаловать в мир ребусов! Свайп, чтобы начать</string>
+    <string name="how_to_play_text_1"     >Соединяй образы, думай неожиданно</string>
+    <string name="how_to_play_text_2"     >Куб? Блок? Угол комнаты? Рассматривай все варианты</string>
+    <string name="how_to_play_text_3"     >Тренируй логику с огромным количеством ярких ребусов</string>
+    <string name="how_to_play_text_4"     >Копи очки, решая ребусы. С их помощью можно открывать ответы</string>
+    <string name="how_to_play_start"      >Все понятно</string>
+    <string name="feedback_text"          >Игра написана в качестве курсовой работы, МИРЭА, 2020</string>
+    <string name="feedback_close"         >Закрыть</string>
+</resources>

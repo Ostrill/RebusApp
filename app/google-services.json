@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "193410388188",
+    "firebase_url": "https://rebus-app.firebaseio.com",
+    "project_id": "rebus-app",
+    "storage_bucket": "rebus-app.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:193410388188:android:7477af549977dfedb36419",
+        "android_client_info": {
+          "package_name": "com.vladimir.rebusapp"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "193410388188-8qfp6ircgtnhf34ck9in0knetduf7uib.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCpXudbfHd2wLvlCQ_DLD6ThtZGgZPvpmY"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "193410388188-8qfp6ircgtnhf34ck9in0knetduf7uib.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

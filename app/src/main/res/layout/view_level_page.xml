@@ -1,0 +1,201 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    android:id="@+id/level_page_constraint_layout"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <ImageView
+        android:id="@+id/level_page_done_image_1"
+        android:layout_width="115dp"
+        android:layout_height="115dp"
+        android:padding="30dp"
+        android:src="@drawable/ic_done_level_page"
+        app:layout_constraintStart_toStartOf="@+id/level_page_table_layout"
+        app:layout_constraintTop_toTopOf="@+id/level_page_table_layout" />
+    <ImageView
+        android:id="@+id/level_page_done_image_2"
+        android:layout_width="115dp"
+        android:layout_height="115dp"
+        android:padding="30dp"
+        android:src="@drawable/ic_done_level_page"
+        app:layout_constraintEnd_toEndOf="@+id/level_page_table_layout"
+        app:layout_constraintTop_toTopOf="@+id/level_page_table_layout" />
+    <ImageView
+        android:id="@+id/level_page_done_image_3"
+        android:layout_width="115dp"
+        android:layout_height="115dp"
+        android:padding="30dp"
+        android:src="@drawable/ic_done_level_page"
+        app:layout_constraintStart_toStartOf="@+id/level_page_table_layout"
+        app:layout_constraintTop_toBottomOf="@+id/level_page_done_image_1" />
+    <ImageView
+        android:id="@+id/level_page_done_image_4"
+        android:layout_width="115dp"
+        android:layout_height="115dp"
+        android:padding="30dp"
+        android:src="@drawable/ic_done_level_page"
+        app:layout_constraintEnd_toEndOf="@+id/level_page_table_layout"
+        app:layout_constraintTop_toBottomOf="@+id/level_page_done_image_2" />
+    <ImageView
+        android:id="@+id/level_page_done_image_5"
+        android:layout_width="115dp"
+        android:layout_height="115dp"
+        android:padding="30dp"
+        android:src="@drawable/ic_done_level_page"
+        app:layout_constraintStart_toStartOf="@+id/level_page_table_layout"
+        app:layout_constraintBottom_toTopOf="@+id/level_page_done_image_7" />
+    <ImageView
+        android:id="@+id/level_page_done_image_6"
+        android:layout_width="115dp"
+        android:layout_height="115dp"
+        android:padding="30dp"
+        android:src="@drawable/ic_done_level_page"
+        app:layout_constraintEnd_toEndOf="@+id/level_page_table_layout"
+        app:layout_constraintBottom_toTopOf="@+id/level_page_done_image_8" />
+    <ImageView
+        android:id="@+id/level_page_done_image_7"
+        android:layout_width="115dp"
+        android:layout_height="115dp"
+        android:padding="30dp"
+        android:src="@drawable/ic_done_level_page"
+        app:layout_constraintStart_toStartOf="@+id/level_page_table_layout"
+        app:layout_constraintBottom_toBottomOf="@+id/level_page_table_layout" />
+    <ImageView
+        android:id="@+id/level_page_done_image_8"
+        android:layout_width="115dp"
+        android:layout_height="115dp"
+        android:padding="30dp"
+        android:src="@drawable/ic_done_level_page"
+        app:layout_constraintEnd_toEndOf="@+id/level_page_table_layout"
+        app:layout_constraintBottom_toBottomOf="@+id/level_page_table_layout" />
+
+
+    <LinearLayout
+        android:id="@+id/level_page_lock_layout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:background="@color/colorTransparent"
+        android:visibility="gone"
+        app:layout_constraintBottom_toBottomOf="@+id/level_page_table_layout"
+        app:layout_constraintEnd_toEndOf="@+id/level_page_table_layout"
+        app:layout_constraintStart_toStartOf="@+id/level_page_table_layout"
+        app:layout_constraintTop_toTopOf="@+id/level_page_table_layout" >
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="90dp"
+            android:src="@drawable/ic_lock"
+            android:tint="@color/colorText"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginBottom="10dp"
+            android:background="@color/colorTransparent"
+            tools:tint="@color/colorSecondary"/>
+
+        <TextView
+            android:id="@+id/level_page_lock_label"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:textColor="@color/colorText"
+            android:textAlignment="center"
+            android:background="@color/colorTransparent"
+            style="@style/TextAppearance.MaterialComponents.Headline5"
+            tools:text="X rebuses\nfor unlock"/>
+
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/level_page_label"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp"
+        android:textColor="@color/colorText"
+        app:layout_constraintBottom_toTopOf="@+id/level_page_table_layout"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        style="@style/TextAppearance.MaterialComponents.Headline6"
+        tools:text="Level N" />
+
+    <TableLayout
+        android:id="@+id/level_page_table_layout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <TableRow>
+
+            <ImageView
+                android:id="@+id/level_page_rebus_1"
+                android:layout_width="105dp"
+                android:layout_height="105dp"
+                android:layout_margin="5dp"
+                tools:src="@color/colorPrimary" />
+
+            <ImageView
+                android:id="@+id/level_page_rebus_2"
+                android:layout_width="105dp"
+                android:layout_height="105dp"
+                android:layout_margin="5dp"
+                tools:src="@color/colorPrimary" />
+        </TableRow>
+
+        <TableRow>
+
+            <ImageView
+                android:id="@+id/level_page_rebus_3"
+                android:layout_width="105dp"
+                android:layout_height="105dp"
+                android:layout_margin="5dp"
+                tools:src="@color/colorPrimary" />
+
+            <ImageView
+                android:id="@+id/level_page_rebus_4"
+                android:layout_width="105dp"
+                android:layout_height="105dp"
+                android:layout_margin="5dp"
+                tools:src="@color/colorPrimary" />
+        </TableRow>
+
+        <TableRow>
+
+            <ImageView
+                android:id="@+id/level_page_rebus_5"
+                android:layout_width="105dp"
+                android:layout_height="105dp"
+                android:layout_margin="5dp"
+                tools:src="@color/colorPrimary" />
+
+            <ImageView
+                android:id="@+id/level_page_rebus_6"
+                android:layout_width="105dp"
+                android:layout_height="105dp"
+                android:layout_margin="5dp"
+                tools:src="@color/colorPrimary" />
+        </TableRow>
+
+        <TableRow>
+
+            <ImageView
+                android:id="@+id/level_page_rebus_7"
+                android:layout_width="105dp"
+                android:layout_height="105dp"
+                android:layout_margin="5dp"
+                tools:src="@color/colorPrimary" />
+
+            <ImageView
+                android:id="@+id/level_page_rebus_8"
+                android:layout_width="105dp"
+                android:layout_height="105dp"
+                android:layout_margin="5dp"
+                tools:src="@color/colorPrimary" />
+        </TableRow>
+    </TableLayout>
+    
+</androidx.constraintlayout.widget.ConstraintLayout>
