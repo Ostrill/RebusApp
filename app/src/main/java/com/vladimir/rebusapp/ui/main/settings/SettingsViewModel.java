@@ -1,11 +1,7 @@
-package com.vladimir.rebusapp.ui.settings;
+package com.vladimir.rebusapp.ui.main.settings;
 
 import com.vladimir.rebusapp.R;
-import com.vladimir.rebusapp.database.rebuses.Rebus;
 import com.vladimir.rebusapp.utils.Repository;
-
-import java.util.ArrayList;
-import java.util.List;
 
 import androidx.lifecycle.ViewModel;
 

@@ -1,4 +1,4 @@
-package com.vladimir.rebusapp.ui.levels;
+package com.vladimir.rebusapp.ui.main.levels;
 
 import androidx.lifecycle.ViewModel;
 

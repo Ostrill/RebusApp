@@ -1,6 +1,6 @@
-package com.vladimir.rebusapp.ui.rebuses;
+package com.vladimir.rebusapp.ui.main.rebuses;
 
-import com.vladimir.rebusapp.database.rebuses.Rebus;
+import com.vladimir.rebusapp.database.tablerebuses.Rebus;
 import com.vladimir.rebusapp.utils.Repository;
 
 import java.util.ArrayList;

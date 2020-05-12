@@ -15,7 +15,7 @@ import com.bumptech.glide.RequestBuilder;
 import com.bumptech.glide.RequestManager;
 import com.bumptech.glide.load.resource.drawable.DrawableTransitionOptions;
 import com.vladimir.rebusapp.R;
-import com.vladimir.rebusapp.database.rebuses.Rebus;
+import com.vladimir.rebusapp.database.tablerebuses.Rebus;
 import com.vladimir.rebusapp.utils.Repository;
 
 import java.util.ArrayList;
@@ -24,7 +24,6 @@ import java.util.List;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.constraintlayout.widget.ConstraintLayout;
-import androidx.constraintlayout.widget.ConstraintSet;
 import androidx.recyclerview.widget.RecyclerView;
 import jp.wasabeef.glide.transformations.BlurTransformation;
 

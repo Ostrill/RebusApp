@@ -16,14 +16,14 @@ import android.widget.TextView;
 import com.vladimir.rebusapp.R;
 import com.vladimir.rebusapp.adapters.LevelsViewPagerAdapter;
 import com.vladimir.rebusapp.ui.dialogs.HowToPlayDialogFragment;
-import com.vladimir.rebusapp.ui.levels.LevelsFragment;
-import com.vladimir.rebusapp.ui.rebuses.RebusFragment;
-import com.vladimir.rebusapp.ui.settings.SettingsFragment;
+import com.vladimir.rebusapp.ui.main.levels.LevelsFragment;
+import com.vladimir.rebusapp.ui.main.rebuses.RebusFragment;
+import com.vladimir.rebusapp.ui.main.settings.SettingsFragment;
 import com.vladimir.rebusapp.utils.Repository;
 
 public class MainActivity extends AppCompatActivity {
 
-    private final String TAG = "MainActivity";
+    private final static String TAG = "MainActivity";
     private MainViewModel mViewModel;
     private ProgressBar centerProgressBar;
     private ProgressBar bottomProgressBar;
@@ -144,13 +144,6 @@ public class MainActivity extends AppCompatActivity {
         }
     }
 
-    @Override
-    protected void onDestroy() {
-        super.onDestroy();
-
-//        mViewModel.setLoadingCompleted();
-    }
-
     private void restoreFragment() {
         switch (mViewModel.getState()) {
             case MainViewModel.REBUS_IS_OPEN:
@@ -173,24 +166,24 @@ public class MainActivity extends AppCompatActivity {
         }
     }
 
-    public void openFragment(Fragment fragment) {
+//    public void openFragment(Fragment fragment) {
+//        FragmentManager fragmentManager = getSupportFragmentManager();
+//        fragmentManager.beginTransaction()
+//                .replace(R.id.main_container, fragment)
+//                .setTransition(FragmentTransaction.TRANSIT_FRAGMENT_FADE)
+//                .addToBackStack(null)
+//                .commit();
+//    }
+
+    private void openFragment(Fragment fragment) {
         FragmentManager fragmentManager = getSupportFragmentManager();
         fragmentManager.beginTransaction()
                 .replace(R.id.main_container, fragment)
                 .setTransition(FragmentTransaction.TRANSIT_FRAGMENT_FADE)
-                .addToBackStack(null)
                 .commit();
     }
 
-    public void openFragmentWithoutStack(Fragment fragment) {
-        FragmentManager fragmentManager = getSupportFragmentManager();
-        fragmentManager.beginTransaction()
-                .replace(R.id.main_container, fragment)
-                .setTransition(FragmentTransaction.TRANSIT_FRAGMENT_FADE)
-                .commit();
-    }
-
-    public void openRebus(int levelIndex) {
+    private void openRebus(int levelIndex) {
         Log.i(TAG, "Rebus #" + Repository.getLevel(levelIndex) + "." + Repository.getSubLevel(levelIndex) + " clicked");
         int availableRebusesQuantity = Repository.getInstance().getAvailableRebusesQuantity();
         if (levelIndex >= availableRebusesQuantity || availableRebusesQuantity == 0) {
@@ -206,22 +199,22 @@ public class MainActivity extends AppCompatActivity {
         rebusFragment.setArguments(bundle);
 
         mViewModel.setState(MainViewModel.REBUS_IS_OPEN);
-        openFragmentWithoutStack(rebusFragment);
+        openFragment(rebusFragment);
     }
 
-    public void openLevels() {
+    private void openLevels() {
         LevelsFragment levelsFragment = new LevelsFragment();
         levelsFragment.setOnRebusClickListener(onRebusClickListener);
         levelsFragment.setOnSettingsClickListener(onSettingsClickListener);
         mViewModel.setState(MainViewModel.LEVEL_IS_OPEN);
-        openFragmentWithoutStack(levelsFragment);
+        openFragment(levelsFragment);
     }
 
-    public void openSettings() {
+    private void openSettings() {
         SettingsFragment settingsFragment = new SettingsFragment();
         settingsFragment.setOnBackClickListener(onBackClickListener);
         mViewModel.setState(MainViewModel.SETTINGS_ARE_OPEN);
-        openFragmentWithoutStack(settingsFragment);
+        openFragment(settingsFragment);
         Log.d(TAG, "#settings has clicked");
     }
 

@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    tools:context=".ui.levels.LevelsFragment">
+    tools:context=".ui.main.levels.LevelsFragment">
 
     <ImageView
         android:id="@+id/rebus_back_button"

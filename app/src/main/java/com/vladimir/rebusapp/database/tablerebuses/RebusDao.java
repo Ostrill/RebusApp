@@ -1,4 +1,4 @@
-package com.vladimir.rebusapp.database.rebuses;
+package com.vladimir.rebusapp.database.tablerebuses;
 
 import androidx.room.Dao;
 import androidx.room.Insert;
@@ -29,12 +29,12 @@ public interface RebusDao {
     )
     int getScoreById(String rebusId);
 
-    @Query(
-            "SELECT count(score) " +
-            "FROM rebuses " +
-            "WHERE score <> 0"
-    )
-    int getSolvedQuantity();
+//    @Query(
+//            "SELECT count(score) " +
+//            "FROM rebuses " +
+//            "WHERE score <> 0"
+//    )
+//    int getSolvedQuantity();
 
     @Query(
             "UPDATE rebuses " +

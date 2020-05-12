@@ -1,6 +1,6 @@
-package com.vladimir.rebusapp.database.levels;
+package com.vladimir.rebusapp.database.tablelevels;
 
-import com.vladimir.rebusapp.database.rebuses.Rebus;
+import com.vladimir.rebusapp.database.tablerebuses.Rebus;
 
 import androidx.room.ColumnInfo;
 import androidx.room.Entity;

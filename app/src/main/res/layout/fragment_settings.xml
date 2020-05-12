@@ -5,7 +5,7 @@
     android:layout_height="match_parent"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:background="@color/colorBackground"
-    tools:context=".ui.settings.SettingsFragment">
+    tools:context=".ui.main.settings.SettingsFragment">
 
     <ImageView
         android:id="@+id/settings_back_button"

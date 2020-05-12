@@ -1,9 +1,9 @@
 package com.vladimir.rebusapp.database;
 
-import com.vladimir.rebusapp.database.levels.Level;
-import com.vladimir.rebusapp.database.levels.LevelDao;
-import com.vladimir.rebusapp.database.rebuses.Rebus;
-import com.vladimir.rebusapp.database.rebuses.RebusDao;
+import com.vladimir.rebusapp.database.tablelevels.Level;
+import com.vladimir.rebusapp.database.tablelevels.LevelDao;
+import com.vladimir.rebusapp.database.tablerebuses.Rebus;
+import com.vladimir.rebusapp.database.tablerebuses.RebusDao;
 
 import androidx.room.Database;
 import androidx.room.RoomDatabase;

@@ -1,4 +1,4 @@
-package com.vladimir.rebusapp.ui.rebuses;
+package com.vladimir.rebusapp.ui.main.rebuses;
 
 import android.os.Bundle;
 

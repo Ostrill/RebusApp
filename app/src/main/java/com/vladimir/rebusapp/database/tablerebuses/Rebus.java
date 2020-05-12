@@ -1,4 +1,4 @@
-package com.vladimir.rebusapp.database.rebuses;
+package com.vladimir.rebusapp.database.tablerebuses;
 
 import com.google.gson.annotations.SerializedName;
 

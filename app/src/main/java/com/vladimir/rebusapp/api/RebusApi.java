@@ -1,9 +1,8 @@
 package com.vladimir.rebusapp.api;
 
-import com.vladimir.rebusapp.database.rebuses.Rebus;
+import com.vladimir.rebusapp.database.tablerebuses.Rebus;
 
 import java.util.ArrayList;
-import java.util.List;
 
 import retrofit2.Call;
 import retrofit2.http.GET;

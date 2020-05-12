@@ -1,35 +1,20 @@
 package com.vladimir.rebusapp.adapters;
 
 import android.content.res.Resources;
-import android.graphics.Color;
-import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
-import android.widget.TableLayout;
 import android.widget.TextView;
 
-import com.bumptech.glide.RequestBuilder;
-import com.bumptech.glide.RequestManager;
-import com.bumptech.glide.load.resource.drawable.DrawableTransitionOptions;
 import com.vladimir.rebusapp.R;
-import com.vladimir.rebusapp.database.rebuses.Rebus;
 import com.vladimir.rebusapp.utils.Repository;
-
-import java.util.ArrayList;
-import java.util.List;
 
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
-import androidx.constraintlayout.widget.ConstraintLayout;
-import androidx.constraintlayout.widget.ConstraintSet;
 import androidx.recyclerview.widget.RecyclerView;
-import jp.wasabeef.glide.transformations.BlurTransformation;
-
-import static com.vladimir.rebusapp.utils.Constants.REBUSES_QUANTITY_FOR_LEVEL;
 
 public class HowToPlayViewPagerAdapter extends RecyclerView.Adapter<HowToPlayViewPagerAdapter.ViewHolder>
 {

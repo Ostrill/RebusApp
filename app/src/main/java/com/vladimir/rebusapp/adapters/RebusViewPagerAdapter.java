@@ -18,7 +18,7 @@ import com.bumptech.glide.load.resource.drawable.DrawableTransitionOptions;
 import com.google.android.material.textfield.TextInputEditText;
 import com.google.android.material.textfield.TextInputLayout;
 import com.vladimir.rebusapp.R;
-import com.vladimir.rebusapp.database.rebuses.Rebus;
+import com.vladimir.rebusapp.database.tablerebuses.Rebus;
 import com.vladimir.rebusapp.utils.Repository;
 
 import java.util.ArrayList;

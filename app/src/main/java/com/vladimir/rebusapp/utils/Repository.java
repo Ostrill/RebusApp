@@ -16,8 +16,8 @@ import com.google.firebase.storage.StorageReference;
 import com.vladimir.rebusapp.api.Description;
 import com.vladimir.rebusapp.api.RebusApi;
 import com.vladimir.rebusapp.database.AppDatabase;
-import com.vladimir.rebusapp.database.levels.Level;
-import com.vladimir.rebusapp.database.rebuses.Rebus;
+import com.vladimir.rebusapp.database.tablelevels.Level;
+import com.vladimir.rebusapp.database.tablerebuses.Rebus;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -45,7 +45,7 @@ import static com.vladimir.rebusapp.utils.Constants.SP_VERSION;
 public class Repository extends Application {
 
     public static Repository instance;
-    private final String TAG = "Repository";
+    private static final String TAG = "Repository";
 
     public static final int LOADING_NOT_STARTED = 0;
     public static final int LOADING_DB_COMPLETED = 1;
@@ -60,13 +60,13 @@ public class Repository extends Application {
 
     private MutableLiveData<Integer> mGlideLoadingPercentLiveData;
     private MutableLiveData<Integer> mLoadingStateLiveData;
-    private boolean isSynchronized;
-    private boolean synchronizationIsNow;
+    private boolean mIsSynchronized;
+    private boolean mSynchronizationIsNow;
 //    private boolean synchronizationCompleted;
 
-    private SharedPreferences sharedPreferences;
+    private SharedPreferences mSharedPreferences;
 
-    private FirebaseStorage storage;
+    private FirebaseStorage mStorage;
 
     @Override
     public void onCreate() {
@@ -84,9 +84,9 @@ public class Repository extends Application {
                 .build()
                 .create(RebusApi.class);
 
-        storage = FirebaseStorage.getInstance();
+        mStorage = FirebaseStorage.getInstance();
 
-        sharedPreferences = getSharedPreferences(SP_NAME, MODE_PRIVATE);
+        mSharedPreferences = getSharedPreferences(SP_NAME, MODE_PRIVATE);
 
         mAllRebuses = new ArrayList<>();
         mLoadingStateLiveData = new MutableLiveData<>();
@@ -94,8 +94,8 @@ public class Repository extends Application {
 
         mLoadingStateLiveData.postValue(LOADING_NOT_STARTED);
         mGlideLoadingPercentLiveData.postValue(0);
-        isSynchronized = false;
-        synchronizationIsNow = false;
+        mIsSynchronized = false;
+        mSynchronizationIsNow = false;
 //        synchronizationCompleted = false;
 
         subscribeOnDatabase();
@@ -110,53 +110,53 @@ public class Repository extends Application {
 
                     mAllRebuses = rebuses;
 
-                    if (!synchronizationIsNow) {
+                    if (!mSynchronizationIsNow) {
                         mLoadingStateLiveData.postValue(LOADING_DB_COMPLETED);
                     }
 
-                    if (!isSynchronized) {
+                    if (!mIsSynchronized) {
                         startSynchronization();
-                        isSynchronized = true;
+                        mIsSynchronized = true;
                     }
                 });
     }
 
     public boolean isSynchronizationCompleted() {
 //        return  synchronizationCompleted;
-        return isSynchronized && !synchronizationIsNow;
+        return mIsSynchronized && !mSynchronizationIsNow;
     }
 
     public void setScore(int score) {
-        SharedPreferences.Editor editor = sharedPreferences.edit();
+        SharedPreferences.Editor editor = mSharedPreferences.edit();
         editor.putInt(SP_SCORE, score).apply();
     }
 
     public int getScore() {
-        return sharedPreferences.getInt(SP_SCORE, 0);
+        return mSharedPreferences.getInt(SP_SCORE, 0);
     }
 
     public void setVersion(int score) {
-        SharedPreferences.Editor editor = sharedPreferences.edit();
+        SharedPreferences.Editor editor = mSharedPreferences.edit();
         editor.putInt(SP_VERSION, score).apply();
     }
 
+    public int getVersion() {
+        return mSharedPreferences.getInt(SP_VERSION, -1);
+    }
+
     public void completeFirstLaunch() {
-        sharedPreferences.edit().putBoolean(SP_FIRST_LAUNCH, true).apply();
+        mSharedPreferences.edit().putBoolean(SP_FIRST_LAUNCH, true).apply();
     }
 
     public boolean checkFirstLaunch() {
-        return sharedPreferences.getBoolean(SP_FIRST_LAUNCH, false);
-    }
-
-    public int getVersion() {
-        return sharedPreferences.getInt(SP_VERSION, -1);
+        return mSharedPreferences.getBoolean(SP_FIRST_LAUNCH, false);
     }
 
     public static Repository getInstance() { return instance; }
 
     private void startSynchronization() {
         Log.d(TAG, "#startSynchronization");
-        synchronizationIsNow = true;
+        mSynchronizationIsNow = true;
         mRebusApi.getDescription()
                 .enqueue(new Callback<Description>() {
                     @Override
@@ -223,7 +223,7 @@ public class Repository extends Application {
             mLoadingStateLiveData.postValue(LOADING_GLIDE_STARTS);
             preloadImages();
         } else {
-            synchronizationIsNow = false;
+            mSynchronizationIsNow = false;
 //            synchronizationCompleted = true;
             mLoadingStateLiveData.postValue(syncState);
         }
@@ -233,7 +233,7 @@ public class Repository extends Application {
         return mGlideLoadingPercentLiveData;
     }
 
-    public void preloadImages() {
+    private void preloadImages() {
         final int[] counter = {0};
         for (int i = 0; i < mAllRebuses.size(); ++i) {
             Rebus current = mAllRebuses.get(i);
@@ -276,7 +276,7 @@ public class Repository extends Application {
 
     private void checkEndPreload(int counter) {
         if (counter == mAllRebuses.size()) {
-            synchronizationIsNow = false;
+            mSynchronizationIsNow = false;
 //            synchronizationCompleted = true;
             mLoadingStateLiveData.postValue(LOADING_SYNC_COMPLETED);
         }
@@ -325,7 +325,7 @@ public class Repository extends Application {
     }
 
     public StorageReference getStorageRef() {
-        return storage.getReference();
+        return mStorage.getReference();
     }
 
     static public int getLevel(int levelIndex) {
